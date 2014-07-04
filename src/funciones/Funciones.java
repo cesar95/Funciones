@@ -332,6 +332,99 @@ public class Funciones
         }
         return String.valueOf(numer);
     }
+    
+    //18
+    public static String[] FuncionOrdenarPalabras(String[] Cadena)
+    {
+        for(int i=0;i<Cadena.length;i++) 
+        {
+            for(int j=0;j<Cadena.length-i;j++) 
+            {
+                if (Cadena[j].compareTo(Cadena[j+1])>0) 
+                {
+                    String aux;
+                    aux=Cadena[j];
+                    Cadena[j]=Cadena[j+1];
+                    Cadena[j+1]=aux;
+                }
+            }
+        }
+        return Cadena;
+    }
+    
+    //19
+    public static int FuncionBinario(int Numero)
+    {
+        int coc = 0, res=0,Binario = 0;
+        while (Numero >= 2)
+        {
+            coc = Numero / 2;
+            res = Numero % 2;
+            Numero = coc;
+            if (res == 1) 
+            {
+               Binario++;
+            }
+        }
+        return Binario;
+    }
+    
+    //21
+    public static String Matriz1(String [][]n){
+        
+        String res = null;
+        int[][] M = new int[3][3];
+        for (int a = 0; a < 3 / 2; a++) 
+        {
+            for (int i = a; i < 3 - a; i++) 
+            {
+                res = res + String.valueOf(M[a][i]);
+            }
+            for (int i = a; i <= 3 - a; i++) 
+            {
+                res = res + String.valueOf(M[i][3 - a + 1]);
+            }
+            for (int i = 3 - a + 1; i >= a + 1; i--) 
+            {
+                res = res + String.valueOf(M[3 - a + 1][i]);
+            }
+            for (int i = 3 - a + 1; i >= a + 1; i--)
+            {
+                res = res + String.valueOf(M[i][a]);
+            }
+        }
+        if (3 % 2 == 1) 
+        {
+            res = res + String.valueOf(M[3 / 2 + 1][3 / 2 + 1]);
+        }
+        return res;
+    }
+    
+    //22
+    public static String Matriz(String [][]n)
+    {
+        String res = null;
+        int[][] M = new int[3][3];
+        for (int a = 0; a < 3 / 2; a++) 
+        {
+            for (int i = a; i < 3 - a; i++) {
+            res = res + String.valueOf(M[a][i]);
+        }
+        for (int i = a; i <= 3 - a; i++) {
+            res = res + String.valueOf(M[i][3 - a + 1]);
+        }
+        for (int i = 3 - a + 1; i >= a + 1; i--) {
+            res = res + String.valueOf(M[3 - a + 1][i]);
+        }
+        for (int i = 3 - a + 1; i >= a + 1; i--) {
+            res = res + String.valueOf(M[i][a]);
+        }
+        }
+        if (3 % 2 == 1) {
+            res = res + String.valueOf(M[3 / 2 + 1][3 / 2 + 1]);
+        }
+        return res;
+    }   
 }
 
     
