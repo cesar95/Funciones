@@ -6,6 +6,9 @@
 
 package funciones;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
@@ -20,24 +23,38 @@ public class Funciones
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) 
+    public static void main(String[] args) throws IOException 
     {
+//        BufferedReader a=new BufferedReader(new InputStreamReader(System.in));
+//
+//      System.out.println("Ingrese uns frase : ");
+//      String frase=a.readLine();
+//      String []palabra=frase.split(" ");
+//
+//      for(int i=palabra.length-1;i>=0;i--){
+//          System.out.print(palabra[i]+" ");
+//      }
+
         //2
-        //System.out.println(FuncionSerie2(3, 4));
+        System.out.println(FuncionSerie2(3, 4));
         //8
-        //System.out.println("Hay "+FuncionContarA("ala, holA como estás")+ " palabras con A");
+        System.out.println("Hay "+FuncionContarA("ala, holA como estás")+ " palabras con A");
         //9
-        //System.out.println(FuncionPotenciaDeDos(16));
+        System.out.println(FuncionPotenciaDeDos(16));
         //10
-        //System.out.println(FuncionNumPerfecto(5, 7));
+        System.out.println(FuncionNumPerfecto(5, 7));
         //13
-       //System.out.println(FuncionOrdenar());
+        //System.out.println(FuncionOrdenar());
         //14
-        //System.out.println(FuncionSerie14(5, 3, 3));
+        System.out.println(FuncionSerie14(5, 3, 3));
         //16
-        //System.out.println(FuncionSerie16(5,3,2));
+        System.out.println(FuncionSerie16(5,3,2));
         //17
         System.out.println(FuncionLetrasAnumero("DOSCIENTOS QUINCE"));
+        //18
+        //System.out.println(FuncionOrdenarPalabras());
+        //19
+        System.out.println(FuncionBinario(3));
     }
     
     //2
